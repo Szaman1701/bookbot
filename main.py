@@ -1,4 +1,4 @@
-from stats import number_of_words
+from stats import number_of_words, number_of_signs
 
 # def get_book_text(path_to_file):
 #     with open(path_to_file) as f:
@@ -14,4 +14,4 @@ def main():
 
 #main()
 number_of_words()
-
+number_of_signs()
