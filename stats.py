@@ -7,7 +7,7 @@ def get_book_text(path_to_file):
 
 def number_of_words():
     num_words = len(get_book_text("./books/frankenstein.txt").split() )
-    print(num_words,"words found in the document")
+    print("Found", num_words,"total words")
 
 num_words = {}
 
@@ -26,16 +26,30 @@ def number_of_signs():
 
 dictionaty_list = []
 
-def dic_list():
+# def dic_list():
+#     for item in num_words:
+#         new_dic = {}
+#         key = item
+#         value = int(num_words[item])
+
+#         new_dic[item] = value
+#         dictionaty_list.append(new_dic)
+#     print(dictionaty_list)
+
+def dic_list_1():
     for item in num_words:
         new_dic = {}
-        key = item
-        value = int(num_words[item])
-
-        new_dic[item] = value
+        new_dic["letter"] = item
+        new_dic["value"] = int(num_words[item])
         dictionaty_list.append(new_dic)
-    print(dictionaty_list)
+    return(dictionaty_list)
 
+def sort_on(dictioary_list):
+    return dictioary_list["value"]
+
+def dic_sort():
+    dictionaty_list.sort(reverse=True, key=sort_on)
+    return(dictionaty_list)
 
 
 
